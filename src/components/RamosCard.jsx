@@ -5,12 +5,12 @@ import {
     Center,
     VStack
 } from '@chakra-ui/react'
-
 import {
     AttachmentIcon,
     CheckIcon,
     ChatIcon
 } from '@chakra-ui/icons'
+import { Link } from 'react-router-dom'
 
 const RamosCard = (props) => {
     return (
@@ -24,11 +24,17 @@ const RamosCard = (props) => {
                         [
                             ["Contenido", <AttachmentIcon/>], 
                             ["Calificaciones", <CheckIcon/>], 
-                            ["Foro", <ChatIcon/>]].map((item, index) => {
+                            ["Foro", <ChatIcon/>]]
+                            .map((item, index) => {
                             return (
-                                <Button w='80%' key={index} rightIcon={item[1]}>
-                                    {item[0]}
-                                </Button>)
+                                <Box w='70%'>
+                                    <Link to = {"contenido/" + props.sigla}>
+                                        <Button w="100%" key={index} rightIcon={item[1]}>
+                                            {item[0]}
+                                        </Button>
+                                    </Link>
+                                </Box>
+                            )
                         })
                     }
                 </VStack>

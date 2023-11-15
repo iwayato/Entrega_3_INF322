@@ -6,12 +6,17 @@ import {
     RouterProvider,
 } from "react-router-dom";
 import App from './App.jsx'
+import Contenido from './components/Contenido.jsx';
 
 const router = createBrowserRouter([
     {
         path: "/",
         element: <App />,
     },
+    {
+        path: "contenido/:siglaRamo",
+        element: <Contenido/>
+    }
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
