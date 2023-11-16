@@ -13,6 +13,10 @@ import {
 import { Link } from 'react-router-dom'
 
 const RamosCard = (props) => {
+    const dataToSend = {
+        nombreRamo: props.nombre,
+        siglaRamo: props.sigla
+    }
     return (
         <Box bg='gray.400' borderRadius={8} p={5}>
             <Center>
@@ -28,7 +32,7 @@ const RamosCard = (props) => {
                             .map((item, index) => {
                             return (
                                 <Box w='70%'>
-                                    <Link to = {"contenido/" + props.sigla}>
+                                    <Link to = { { pathname: "contenido/" + props.sigla, state: dataToSend } }>
                                         <Button w="100%" key={index} rightIcon={item[1]}>
                                             {item[0]}
                                         </Button>
