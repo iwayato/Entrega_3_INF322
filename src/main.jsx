@@ -7,6 +7,8 @@ import {
 } from "react-router-dom";
 import App from './App.jsx'
 import Contenido from './components/Contenido.jsx';
+import Calificaciones from './components/Calificaciones.jsx';
+import Foro from './components/Foro.jsx';
 
 const router = createBrowserRouter([
     {
@@ -14,8 +16,16 @@ const router = createBrowserRouter([
         element: <App />,
     },
     {
-        path: "contenido/:siglaRamo",
+        path: "Contenido/:infoRamo",
         element: <Contenido/>
+    },
+    {
+        path: "Calificaciones/:infoRamo",
+        element: <Calificaciones/>
+    },
+    {
+        path: "Foro/:infoRamo",
+        element: <Foro/>
     }
 ]);
 

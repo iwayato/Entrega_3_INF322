@@ -1,12 +1,15 @@
-import { useLocation } from 'react-router-dom';
+import { 
+    useLocation 
+} from 'react-router-dom';
+import NavigationMenu from './NavigationMenu';
 
 const Contenido = () => {
-    const location = useLocation();
-    const receivedData = location.state;
+    let state = useLocation();
     return(
-        <div>
-            {"Contenido" + receivedData?.nombreRamo}
-        </div>
+        <NavigationMenu
+            sigla={state.state.sigla}
+            nombre={state.state.nombre}
+            tipo={"Contenido"}/>
     )
 }
 
