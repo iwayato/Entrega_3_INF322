@@ -12,7 +12,7 @@ import {
 import { BellIcon } from '@chakra-ui/icons'
 import { Link } from 'react-router-dom'
 
-const NavigationMenu = ({ sigla, nombre, tipo }) => {
+const NavigationMenu = ({ sigla, nombre, tipo, componente: CustomComponent }) => {
     return (
         <Grid
             templateAreas={`"header header" "nav main"`}
@@ -60,7 +60,7 @@ const NavigationMenu = ({ sigla, nombre, tipo }) => {
             </GridItem>
 
             <GridItem pl='2' bg='white' area={'main'}>
-                Componente
+                <CustomComponent/>
             </GridItem>
         </Grid>
     )

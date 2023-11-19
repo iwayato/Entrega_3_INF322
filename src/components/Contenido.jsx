@@ -5,11 +5,22 @@ import NavigationMenu from './NavigationMenu';
 
 const Contenido = () => {
     let state = useLocation();
+
+    const Contenido = () => {
+        return (
+            <div>
+                CONTENIDO
+            </div>
+        )
+    }
+
     return(
         <NavigationMenu
             sigla={state.state.sigla}
             nombre={state.state.nombre}
-            tipo={"Contenido"}/>
+            tipo={"Contenido"}
+            componente={Contenido}
+        />
     )
 }
 
