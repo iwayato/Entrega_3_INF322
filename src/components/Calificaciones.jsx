@@ -16,7 +16,7 @@ import { faker } from '@faker-js/faker';
 const Calificaciones = () => {
     let state = useLocation();
 
-    const componentsArray = Array.from({ length: 15 }, (_, index) => (
+    const fakeRows = Array.from({ length: 15 }, (_, index) => (
         <Tr key={index}>
             <Td>{faker.lorem.words(1)}</Td>
             <Td>{faker.date.recent({ days: 60 }).toISOString().split("T")[0]}</Td>
@@ -40,7 +40,7 @@ const Calificaciones = () => {
                         </Tr>
                     </Thead>
                     <Tbody>
-                        {componentsArray}
+                        {fakeRows}
                     </Tbody>
                 </Table>
             </TableContainer>

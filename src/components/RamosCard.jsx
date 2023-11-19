@@ -22,8 +22,8 @@ const RamosCard = ({sigla, nombre}) => {
                     </Text>
                     {
                         [["Contenido", <AttachmentIcon/>], 
-                        ["Calificaciones", <CheckIcon/>], 
-                        ["Foro", <ChatIcon/>]].map((item, index) => {
+                         ["Calificaciones", <CheckIcon/>], 
+                         ["Foro", <ChatIcon/>]].map((item, index) => {
                         return (
                             <Box w='70%' key={index}>
                                 <Link 
