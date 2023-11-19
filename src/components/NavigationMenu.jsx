@@ -59,7 +59,7 @@ const NavigationMenu = ({ sigla, nombre, tipo, componente: CustomComponent }) =>
 
             </GridItem>
 
-            <GridItem pl='2' bg='white' area={'main'}>
+            <GridItem pl='2' bg='white' area={'main'} overflow="auto">
                 <CustomComponent/>
             </GridItem>
         </Grid>

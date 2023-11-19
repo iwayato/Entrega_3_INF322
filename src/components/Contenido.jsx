@@ -1,5 +1,5 @@
-import { 
-    useLocation 
+import {
+    useLocation
 } from 'react-router-dom';
 import NavigationMenu from './NavigationMenu';
 
@@ -8,13 +8,11 @@ const Contenido = () => {
 
     const Contenido = () => {
         return (
-            <div>
-                CONTENIDO
-            </div>
+            <div>CONTENIDO</div>
         )
     }
 
-    return(
+    return (
         <NavigationMenu
             sigla={state.state.sigla}
             nombre={state.state.nombre}

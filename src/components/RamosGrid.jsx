@@ -3,6 +3,8 @@ import {
 } from '@chakra-ui/react'
 import RamosCard from './RamosCard'
 
+// Add Fake Data
+
 const RamosGrid = () => {
     return (
         <SimpleGrid columns={3} spacing={10} m={10}>
