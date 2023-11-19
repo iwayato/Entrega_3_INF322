@@ -5,11 +5,14 @@ import {
     Flex,
     Text,
     HStack,
-    Avatar
+    Avatar,
+    VStack,
+    Button
 } from '@chakra-ui/react'
 import { BellIcon } from '@chakra-ui/icons'
+import { Link } from 'react-router-dom'
 
-const NavigationMenu = ({ sigla, nombre, tipo}) => {
+const NavigationMenu = ({ sigla, nombre, tipo }) => {
     return (
         <Grid
             templateAreas={`"header header" "nav main"`}
@@ -30,12 +33,34 @@ const NavigationMenu = ({ sigla, nombre, tipo}) => {
                 </Box>
             </GridItem>
 
-            <GridItem pl='2' bg='pink.300' area={'nav'}>
-                Nav
+            <GridItem pt={2} bg='#003c6b' area={'nav'}>
+                <VStack spacing={5}>
+                    <Link to={"/"}>
+                        <Button w="160px">
+                            Página principal
+                        </Button>
+                    </Link>
+                    <Link to={"/Contenido/" + sigla + "-" + nombre} state = {{sigla: sigla, nombre: nombre}}>
+                        <Button w="160px">
+                            Contenido
+                        </Button>
+                    </Link>
+                    <Link to={"/Calificaciones/" + sigla + "-" + nombre} state = {{sigla: sigla, nombre: nombre}}>
+                        <Button w="160px">
+                            Calificaciones
+                        </Button>
+                    </Link>
+                    <Link to={"/Foro/" + sigla + "-" + nombre} state = {{sigla: sigla, nombre: nombre}}>
+                        <Button w="160px">
+                            Foro
+                        </Button>
+                    </Link>
+                </VStack>
+
             </GridItem>
 
-            <GridItem pl='2' bg='green.300' area={'main'}>
-                Main
+            <GridItem pl='2' bg='white' area={'main'}>
+                Componente
             </GridItem>
         </Grid>
     )
