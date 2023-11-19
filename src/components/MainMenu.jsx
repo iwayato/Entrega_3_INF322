@@ -6,6 +6,7 @@ import {
     Avatar,
     HStack
 } from '@chakra-ui/react'
+import { faker } from '@faker-js/faker';
 import { BellIcon } from '@chakra-ui/icons'
 import RamosGrid from './RamosGrid';
 
@@ -17,7 +18,7 @@ const MainMenu = () => {
                     <Text as="b" fontSize="4xl" color="white">Bienvenid@s a Aula USM - Página principal</Text>
                     <HStack>
                         <BellIcon boxSize={6} color="white"/>
-                        <Text color="white" fontSize="lg" pr={5} pl={5}>Segun Adebayo</Text>
+                        <Text color="white" fontSize="lg" pr={5} pl={5}>{faker.person.fullName()}</Text>
                         <Avatar name='Segun Adebayo' src='https://bit.ly/sage-adebayo'/>
                     </HStack>
                 </Flex>
